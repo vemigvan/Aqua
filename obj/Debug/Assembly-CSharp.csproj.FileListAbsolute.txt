@@ -1,0 +1,2 @@
+D:\gamedev\Unity\games\Aqua\Aqua\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\gamedev\Unity\games\Aqua\Aqua\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
