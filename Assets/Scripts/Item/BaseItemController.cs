@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseItemController : MonoBehaviour, IInteractable
+public class BaseItemController : MonoBehaviour//, IInteractable
 {
     protected Rigidbody rb;
 
