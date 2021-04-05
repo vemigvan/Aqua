@@ -14,10 +14,9 @@ public class PlayerActionController : EntityActionController
 
     private void OnLeftPointerClicked(Vector3 destination, Collider collider)
     {
-        if (_lastTarget != null && _lastTarget.InteractionController.HasInteracted  )
+        if (_lastTarget != null)
         {
             _lastTarget.InteractionController.OnUnfocus();
-            _lastTarget = null;
         }
 
         if (collider != null)

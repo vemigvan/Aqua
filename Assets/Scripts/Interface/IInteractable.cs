@@ -34,8 +34,8 @@ public abstract class InteractionController
 
     public void OnUnfocus()
     {
+        _isFocused = false;
         HasInteracted = false;
-        Debug.Log("Unfocus");
     }
     private void OnUpdate()
     {
