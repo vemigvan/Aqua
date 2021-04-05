@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseEnemyController : CreatureController
 {
     private BaseEnemyStats stats;
-    protected List<BaseItemController> dropItems;
+    protected List<BaseItem> dropItems;
 
     public virtual BaseEnemyStats Stats { get => stats; }
 

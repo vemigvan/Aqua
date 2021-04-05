@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerActionController : EntityActionController
 {
     private Player _player;
-    private Interactable _lastTarget;
+    private IInteractable _lastTarget;
     public PlayerActionController(Player player) : base(player)
     {
         _player = player;
@@ -14,19 +14,19 @@ public class PlayerActionController : EntityActionController
 
     private void OnLeftPointerClicked(Vector3 destination, Collider collider)
     {
-        if (_lastTarget != null)
+        if (_lastTarget != null && _lastTarget.InteractionController.HasInteracted  )
         {
-            _lastTarget.OnUnfocus();
+            _lastTarget.InteractionController.OnUnfocus();
             _lastTarget = null;
         }
 
         if (collider != null)
         {
-            _lastTarget = collider.GetComponent<Interactable>();
+            _lastTarget = collider.GetComponent<IInteractable>();
             if (_lastTarget != null)
             {
-                _lastTarget.OnFocus(_player);
-                Move(_lastTarget.transform.position, _lastTarget.StoppingDistance);
+                _lastTarget.InteractionController.OnFocus(_player);
+                Move(_lastTarget.Body.position, _lastTarget.StoppingDistance);
                 return;
             }
         }

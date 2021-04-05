@@ -36,8 +36,5 @@ public class Interactable : MonoBehaviour
         Debug.Log("Interected" + gameObject);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, _interactionDistance);
-    }
+   
 }

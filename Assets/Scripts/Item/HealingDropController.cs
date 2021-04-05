@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class HealingDropController : BaseItemController
+class HealingDropController //: BaseItem
 {
     public int HP { get; set; }
 
@@ -10,10 +10,5 @@ class HealingDropController : BaseItemController
     {
         HP = healPoints;
     }
-    public override void Interact()
-    {
-        //Heal player
-        //...
-        base.Interact();
-    }
+    
 }
